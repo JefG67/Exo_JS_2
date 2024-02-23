@@ -1,0 +1,12 @@
+#board{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(199, 104, 104);
+    margin-right: 10px;
+}
+
