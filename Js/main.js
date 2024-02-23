@@ -21,8 +21,8 @@ for (let i = 0; i <= 3; i++) {
 board2.appendChild(box);
 
 
-function switchCouleur(){
-    
+function switchCouleur(){ //utiliser "slice" pour recuperer une couleur du tableau et la copié a ma nouvelle box, regarder cours JS avec les tableaux
+
 }
 
 
