@@ -1,13 +1,15 @@
 const box = document.createElement("div")
-const result = document.createElement("div")
+
 box.classList.add("box")
 
-
-
-
 const board = document.querySelector("#board")
+const board2 = document.querySelector("#board2")
 
+
+
+// je cree un tableau dans lequel j'ajoute mes couleurs
 const couleurs = ["#069090", "#cc0a0a", "#0abd07", "yellow"];
+// je cree une boucle pour cloner 4 box
 for (let i = 0; i <= 3; i++) { 
     let newbox = box.cloneNode()
     newbox.innerText = " "
@@ -15,11 +17,22 @@ for (let i = 0; i <= 3; i++) {
     board.appendChild(newbox)
 }
 
-
-let results = box.cloneNode();
-results.innerText = " ";
-board.appendChild(results);
+//creation de ma 5 eme box
+board2.appendChild(box);
 
 
+function switchCouleur(){
+    
+}
 
+
+
+
+
+let style = window.getComputedStyle(element)
+
+function infoCarre(){
+    const backgroundColor = style.backgroundColor
+
+}
 
