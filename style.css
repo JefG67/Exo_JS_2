@@ -11,3 +11,14 @@
     margin-top: 10px;
 }
 
+#board2{
+    display: flex;
+    
+}
+
+#board2 .box{
+    background-color: white;
+    border: solid;
+    margin-left: 300px;
+    
+}

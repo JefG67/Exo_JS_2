@@ -1,34 +1,39 @@
-const box = document.createElement("div")
-
+const box = document.createElement("div") //cree un nouvel element que je stock dans une variable
 box.classList.add("box")
+const resultBox = document.createElement("div")
+resultBox.classList.add("box") 
 
-const board = document.querySelector("#board")
+const board = document.querySelector("#board") //je cree une variable qui selectionne l'element #board de mon html
 const board2 = document.querySelector("#board2")
 
 
 
 // je cree un tableau dans lequel j'ajoute mes couleurs
 const couleurs = ["#069090", "#cc0a0a", "#0abd07", "yellow"];
-// je cree une boucle pour cloner 4 box
+// je cree une boucle pour cloner 4 box a partir de ma variable box cree en haut
 for (let i = 0; i <= 3; i++) { 
     let newbox = box.cloneNode()
     newbox.innerText = " "
     newbox.style.backgroundColor = couleurs[i]; // pour acceder au style css de chaque nouvelle box a laquelle je lui ajoute les valeur de mon tableau
-    board.appendChild(newbox)
-}
+    board.appendChild(newbox) //ajoute chaque nouvel box a mon element #board html
+}    
 
 
-//creation de ma 5 eme box
-board2.appendChild(box);
+//Ajout de ma 5 eme Box (resultBox) cree  en haut a mon board 2
+board2.appendChild(resultBox);
 
-
-let style = window.getComputedStyle(element) // variable pour retouner le style css de l'element HTML en utilisant getComputedStyle sur mon element 
+document.querySelectorAll(".box").forEach(function(newbox) { //je selectione mes box de la class "Box" et je leur met un ecouteur d'evenement au clic a chacune 
 
 newbox.addEventListener("click", function() {
-    // ecouteur evenement au clic la couleur de la boîte cliquée est appliquée à la cinquième boîte
-    board2.style.backgroundColor = style.backgroundColor;
-
+    
+    let style = window.getComputedStyle(this) // variable pour retouner le style css de l'element HTML en utilisant getComputedStyle sur mon element 
+    
+    resultBox.style.backgroundColor = style.backgroundColor; //ajout de la couleur de la box clicker a ma box result
+    });
 });
+
+
+
 
 
 
