@@ -17,22 +17,21 @@ for (let i = 0; i <= 3; i++) {
     board.appendChild(newbox)
 }
 
+
 //creation de ma 5 eme box
 board2.appendChild(box);
 
 
-function switchCouleur(){ //utiliser "slice" pour recuperer une couleur du tableau et la copié a ma nouvelle box, regarder cours JS avec les tableaux
+let style = window.getComputedStyle(element) // variable pour retouner le style css de l'element HTML en utilisant getComputedStyle sur mon element 
 
-}
+newbox.addEventListener("click", function() {
+    // ecouteur evenement au clic la couleur de la boîte cliquée est appliquée à la cinquième boîte
+    board2.style.backgroundColor = style.backgroundColor;
+
+});
 
 
 
 
 
-let style = window.getComputedStyle(element)
-
-function infoCarre(){
-    const backgroundColor = style.backgroundColor
-
-}
 
